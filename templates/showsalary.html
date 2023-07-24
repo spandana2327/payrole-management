@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payroll Release</title>
+    <style>
+        body {
+            background-color: #1c1c1c;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 4px;
+        }
+
+        .result p {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Payroll Release</h1>
+        <div class="result">
+            <p>Employee ID: {{ data.EmployeeID }}</p>
+            <p>Total Salary: {{ data.TotalSalary }}</p>
+        </div>
+    </div>
+</body>
+</html>

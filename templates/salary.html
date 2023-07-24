@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payroll Management - Salary Details</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Enter Salary Details</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form action="/salary_details" method="post" onsubmit="return validateForm()" class="needs-validation" novalidate>
+                    <div class="form-group">
+                        <label for="eid">Employee ID</label>
+                        <input type="number" class="form-control" id="eid" name="eid" required>
+                        <div class="invalid-feedback">Please enter the Employee ID.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dptid">Department ID</label>
+                        <input type="number" class="form-control" id="dptid" name="dptid" required>
+                        <div class="invalid-feedback">Please enter the Department ID.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="account_number">Account Number</label>
+                        <input type="text" class="form-control" id="account_number" name="account_number" required>
+                        <div class="invalid-feedback">Please enter the Account Number.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pan">PAN Number</label>
+                        <input type="text" class="form-control" id="pan" name="pan" required>
+                        <div class="invalid-feedback">Please enter the PAN Number.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="base_salary">Base Salary</label>
+                        <input type="number" class="form-control" id="base_sallary" name="base_sallary" required>
+                        <div class="invalid-feedback">Please enter the Base Salary.</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery scripts for validation -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Client-side validation using JavaScript
+        function validateForm() {
+            const form = document.querySelector('.needs-validation');
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+            return form.checkValidity();
+        }
+    </script>
+</body>
+</html>
